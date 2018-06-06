@@ -1,0 +1,1058 @@
+
+<style type="text/css">
+     .dataTables_info{
+            display: none!important;
+        }
+
+        #search-textbox-table tr td {
+            padding: 2px!important;
+        }
+
+       #search-textbox-table_length,#search-textbox-table_paginate{/*  ,*/
+             display: none!important;
+        }
+        #footert,#headt{
+             display: none!important;
+
+        }
+        #search-textbox-table_filter {
+            
+        }
+
+        #search-textbox-table tbody tr{
+            height: 32px!important;
+        }
+        div.checkbox{
+            padding-top: 0px!important;
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th{
+             height: 32px!important;
+        }
+</style>
+
+
+<div class="row">    
+    <div class="col-lg-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Interrogatorio</h3>
+                <div class="panel-tools">
+                    <a class="tools-action" href="#" data-toggle="collapse">
+                        <i class="pe-7s-angle-up"></i>
+                    </a>
+                    <a class="tools-action" href="#" data-toggle="dispose">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">Alergias</label>
+                        <div class="col-sm-10">                            
+                            <p class="help-block">Alergia 1, Alergia 1, Alergia 1, Alergia 1, Alergia 5, </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">Contraindicaciones</label>
+                        <div class="col-sm-10">                            
+                            <p class="help-block">Contraindicacion 1, Contraindicacion 1, Contraindicacion 1</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">Subjetivo</label>
+                        <div class="col-sm-10">
+                            <textarea type="input" class="form-control" id="inputSubjetivo3" placeholder="Subjetivo"></textarea>
+                            <p class="help-block">Resumen del Interrogatorio</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">Objetivo</label>
+                        <div class="col-sm-10">
+                            <textarea  type="input" class="form-control" id="inputPassword3" placeholder="Objetivo"></textarea> 
+                            <p class="help-block">Exploración física, habitus exterior, marcha, postura, datos de cabeza, cuello, tórax, abdomen, extremidades, genitales y neurológico</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">Análisis</label>
+                        <div class="col-sm-10">
+                            <textarea type="input" class="form-control" id="inputPassword3" placeholder="Resultados"></textarea>
+                            <p class="help-block">Resultados de los Estudios auxiliares de diagnóstico</p>
+                        </div>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Diagnóstico</h3>
+                <div class="panel-tools">
+                    <a class="tools-action" href="#" data-toggle="collapse">
+                        <i class="pe-7s-angle-up"></i>
+                    </a>
+                    <a class="tools-action" href="#" data-toggle="dispose">
+                        <i class="pe-7s-close"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <!--<div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label no-padding-right">Búsqueda</label>
+                        <div class="col-sm-10">
+
+                        <div id="search-textbox-table_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="search-textbox-table"></label></div>
+                            <input type="input" class="form-control" id="inputSubjetivo3" placeholder="Palabras Clave">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>-->
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right no-padding-top">CIE10</label>
+
+    <div class="col-lg-10 col-sm-10">     
+                        <div class="panel panel-white">
+            <div class="panel-heading">
+                <div class="panel-tools">
+                    <a class="tools-action" href="#" data-toggle="collapse">
+                        <i class="pe-7s-angle-up"></i>
+                    </a>
+                   
+                </div>
+            </div>
+            <div class="panel-body">
+                <table id="search-textbox-table" class="table table-celled">
+                    <thead id="headt">
+                        <tr>
+                            <th></th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tfoot id="footert">
+                        <tr>
+                            <th></th>
+                            
+                        </tr>
+                    </tfoot>
+
+                    <tbody id="tbody">
+                        <tr>
+                         <td> <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="A000" class="cie10" onclick="seleccionado(this.value)" onclick="seleccionado(this.value)"><span class="text text-default">Colera debido a Vibrio cholerae 01, biotipo cholerae</span>
+                                </label>
+                            </div>
+                        </td>
+                       </tr>
+<tr>
+                         <td> <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="C480" class="cie10" onclick="seleccionado(this.value)"><span class="text text-default">Tumor maligno del retroperitoneo</span>
+                                </label>
+                            </div>
+                        </td>
+                        </tr>
+<tr>
+                         <td> <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="C481" class="cie10" onclick="seleccionado(this.value)"><span class="text text-default">Tumor maligno de parte especificada del peritoneo</span>
+                                </label>
+                            </div>
+                        </td>
+                        </tr>
+<tr>
+                         <td> <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="C482" class="cie10" onclick="seleccionado(this.value)"><span class="text text-default">Tumor maligno del peritoneo, sin otra especificacion</span>
+                                </label>
+                            </div>
+                        </td>
+                        </tr>
+<tr>
+                         <td> <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="C488" class="cie10" onclick="seleccionado(this.value)"><span class="text text-default">Lesion de sitios contiguos del peritoneo y del retroperitoneo</span>
+                                </label>
+                            </div>
+                        </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+                    </div>                      
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">Causes</label>                        
+                    </div>
+                
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Plan</h3>
+                    <div class="panel-tools">
+                        <a class="tools-action" href="#" data-toggle="collapse">
+                            <i class="pe-7s-angle-up"></i>
+                        </a>
+                        <a class="tools-action" href="#" data-toggle="dispose">
+                            <i class="pe-7s-close"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        
+        <ul class="nav nav-tabs nav-justified" id="myTab8">
+            <li class="active tab-default">
+                <a data-toggle="tab" href="#home8" aria-expanded="true">
+                    Plan
+                    <span class="badge badge-default"></span>
+                </a>
+            </li>
+
+            <li class="tab-default">
+                <a data-toggle="tab" href="#profile8" aria-expanded="false">
+                    Laboratorios 
+                    <span class="badge badge-default">2</span>
+                </a>
+            </li>           
+
+            <li class="tab-default">
+                <a data-toggle="tab" href="#dropdown18" aria-expanded="false">
+                    Est. Gabinete
+                    <span class="badge badge-default"></span>
+                </a>
+            </li>
+
+            <li class="tab-default">
+                <a data-toggle="tab" href="#dropdown18" aria-expanded="false">
+                    Referencia
+                    <span class="badge badge-default"></span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home8" class="tab-pane tab-pane-default active b-300 p-25" style="background: #444444">
+                <div class="panel-body form-horizontal">
+                    
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">Pronóstico</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputPassword3" placeholder="Pronóstico para la Vida y Función">                                
+                        </div>
+                    </div>                        
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label no-padding-right">Consulta Preferente</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="account">
+                                    <option>N.A.</option>
+                                    <option>+Laboratorios</option>
+                                    <option>+15 Días</option>
+                                    <option>+1 Mes</option>
+                                    <option>+2 Meses</option>
+                                    <option>Abierta</option>
+                                </select>
+                        </div>
+                    </div>                        
+                    
+                         
+                    <hr class="wide" />
+                </div>
+    
+            </div>
+
+            <div id="profile8" class="tab-pane tab-pane-default b-300 p-25"  style="background: #444444">
+                <div class="panel-body form-horizontal">                    
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">BIOQUÍMICA CLÍNICA</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Glucosa</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Curva de Tolerancia a Gluc.</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Glucosa basal y post-pandrial</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Química sanguinea Parcial (3)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Química Saguínea Completa (5)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Hemoglobina Glucosilada</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Prueba de Funcionamiento Hepático Completo. (Billis Trans, Fosfata Alcalina, CGT, PT, Alb)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Pruebas de funcionamiento Hepático Parcial(Bilis Trans, Fosfata Alcalina)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Bilirrubinas</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Transaminasas</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Electrolíticos Séricos Completos (Na, K, CI, Mg, Ca, PO4)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Electrolíticos Séricos Parciales (Na, K, Cl)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Gasometría Arterial</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Ácido Úrico</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Perfil Lípidos</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Creatin Fosfoquinasa CPK Fracción MB</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Creatín Fosfoquinasa CPK</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">HORMONAS</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Bioquímica Clínica</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">HEMATOLOGÍA</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" style="">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">COAGULACIÓN</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum CG</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">MICROBIOLOGÍA Y PARASITOLOGÍA</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum MB-P</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum MB-P</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum MB-P</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum MB-P</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum MB-P</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum MB-P</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">MARCADORES TUMORALES</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">SEROLOGÍA</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">UROANÁLISIS</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">Lorem Ipsum</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div id="dropdown18" class="tab-pane tab-pane-default b-300 p-25"  style="background: #444444">
+                <div class="panel-body form-horizontal">                    
+                    <div class="col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Radiografías</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">ABDOMEN SIMPLE </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">TÓRAX</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">ULTRASONIDO</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">MASTOGRAFÍA</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">CRÁNEO </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">T.A.C SIMPLE/CONTRASTADA     </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">COLÓN POR ENEMA               </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">DENSIOMETRÍA ÓSEA</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">HUESOS (ENUNCIAR)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">RESONANCIA MAGNÉTICA           </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">UROGRAFIA EXCRETORA      </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">OTROS ÉXAMENES (ENUNCIAR)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">     
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Ultrasonidos</h3>
+                                <div class="panel-tools">
+                                    <a class="tools-action" href="#" data-toggle="collapse">
+                                        <i class="pe-7s-angle-up"></i>
+                                    </a>
+                                    <a class="tools-action" href="#" data-toggle="dispose">
+                                        <i class="pe-7s-close"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">ABDOMEN SIMPLE </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">TÓRAX</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">ULTRASONIDO</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">MASTOGRAFÍA</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">CRÁNEO </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">T.A.C SIMPLE/CONTRASTADA     </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">COLÓN POR ENEMA               </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">DENSIOMETRÍA ÓSEA</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">HUESOS (ENUNCIAR)</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">RESONANCIA MAGNÉTICA           </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">UROGRAFIA EXCRETORA      </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="text text-default">OTROS ÉXAMENES (ENUNCIAR)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            </div>
+            <div id="dropdown18" class="tab-pane tab-pane-default b-300 p-25"  style="background: #444444">
+                <div class="panel-body form-horizontal">                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    
+
+    </div>
+
+</div>
+
+           
+
+<div class="row">
+    <div class="col-lg-12">
+        
+    </div>
+</div>
+
+
+
+           
+
+
+        <script src="assets/js/lib/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/js/lib/datatables/dataTables.bootstrap.min.js"></script>
+        <script src="assets/js/pages/datatables-search.js"></script>

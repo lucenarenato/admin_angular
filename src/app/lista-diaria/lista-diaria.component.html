@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+		<div class="panel panel-white">
+			<div class="panel-heading">Lista diaria</div>
+			<div class="panel-body">
+			<table class="table table">
+				<tr *ngFor="let item of items | async">
+					<td>{{item?.nombre+" "+item?.ape_paterno +" "+item?.ape_materno}}</td>
+				</tr>
+			</table>
+				
+			</div>
+
+		</div>
+	</div>
+</div>
+
